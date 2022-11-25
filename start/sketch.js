@@ -1,7 +1,15 @@
+let musicFile;
 function setup()
 {
-    createCanvas(400, 400);
-    line(-50, 120, 40, -60);
-line(40, -60, 10, 200);
+    soundFormate('mp3','ogg')
+    musicFile= loadSound('Shinee Dont Call Me',loadMusic);
+}
 
+function loadMusic(){
+    musicFile.play();
+}
+
+function draw(){
+    fill(255,0,0);
+    ellise(50,50,100,100);
 }
