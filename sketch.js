@@ -6,7 +6,7 @@ function setup()
     createCanvas(200,200);
     song = loadSound('Shinee Dont Call Me.mp3',loaded);
     button = createButton('play');
-    button.mouseressed(togglePlaying);
+    button.mousePressed(togglePlaying);
     background(51);
 }
 
