@@ -1,15 +1,27 @@
-let musicFile;
+var song;
+var button;
+
 function setup()
-{
-    soundFormate('mp3','ogg')
-    musicFile= loadSound('Shinee Dont Call Me',loadMusic);
+{   
+    createCanvas(200,200);
+    song = loadSound('rainbow.mp3',loaded);
+    button = createButton('play');
+    button.mouseressed(togglePlaying);
+    background(51);
 }
 
-function loadMusic(){
-    musicFile.play();
+function togglePlaying(){
+    if(!song.isPlaying()){
+        song.play();
+        song.setVolume(0.3);
+        button.html('pause');
+    }
+    else{
+        song.stop();
+        button.html('play');
+    }
 }
 
-function draw(){
-    fill(255,0,0);
-    ellise(50,50,100,100);
+function loaded(){
+    console.log('loaded');
 }
