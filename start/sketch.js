@@ -1,8 +1,8 @@
 let musicFile;
 function setup()
 {
-    soundFormate('mp3','ogg')
-    musicFile= loadSound('Shinee Dont Call Me',loadMusic);
+    soundFormats('mp3','ogg')
+    musicFile = loadSound('Shinee Dont Call Me',loadMusic);
 }
 
 function loadMusic(){
@@ -11,5 +11,5 @@ function loadMusic(){
 
 function draw(){
     fill(255,0,0);
-    ellise(50,50,100,100);
+    ellipse(50,50,100,100);
 }
